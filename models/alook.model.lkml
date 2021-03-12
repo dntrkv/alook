@@ -1,7 +1,7 @@
 connection: "thelook"
 
 # include all the views
-include: "/test.view"
+# include: "/test.view"
 
 datagroup: alook_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
