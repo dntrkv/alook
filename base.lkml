@@ -9,18 +9,18 @@ connection: "bbh-prod"
 # # include all tests in this project
 # include: "tests/**/*.lkml"
 
-datagroup: medfusion_datagroup {
-  max_cache_age: "168 hours"  # 1 week
-  sql_trigger:
-    SELECT -- ONLY UPDATE THE DATE AFTER WE REACH THE GOAL HOUR
-      CASE
-        -- SHOW TODAY'S DATE ONLY WHEN WE'VE ARRIVED AT THE TARGET HOUR (IN 24H FORMAT)
-        WHEN EXTRACT(HOUR FROM CURRENT_TIME('America/New_York')) >= @{refresh} THEN CURRENT_DATE('America/New_York')
-        -- OTHERWISE, STICK WITH YESTERDAY'S DATE
-        ELSE DATE_SUB(CURRENT_DATE('America/New_York'), INTERVAL 1 DAY)
-      END
-  ;;
-}
+# datagroup: medfusion_datagroup {
+#   max_cache_age: "168 hours"  # 1 week
+#   sql_trigger:
+#     SELECT -- ONLY UPDATE THE DATE AFTER WE REACH THE GOAL HOUR
+#       CASE
+#         -- SHOW TODAY'S DATE ONLY WHEN WE'VE ARRIVED AT THE TARGET HOUR (IN 24H FORMAT)
+#         WHEN EXTRACT(HOUR FROM CURRENT_TIME('America/New_York')) >= @{refresh} THEN CURRENT_DATE('America/New_York')
+#         -- OTHERWISE, STICK WITH YESTERDAY'S DATE
+#         ELSE DATE_SUB(CURRENT_DATE('America/New_York'), INTERVAL 1 DAY)
+#       END
+#   ;;
+# }
 
 # # Custom Tables: Final analyses
 # explore: alert_to_basic {
