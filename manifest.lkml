@@ -7,11 +7,17 @@ constant: foo {
 
 constant: ddd {
   value: "asdf"
-  export: override_optional
+  export: override_required
 }
 
 
 constant: dddsddd {
   value: "asdf"
-  export: override_optional
+  export: override_required
+}
+
+
+constant: vv {
+  value: "asdf"
+  export: override_required
 }
