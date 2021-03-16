@@ -11,7 +11,7 @@ constant: ddd {
 }
 
 
-constant: aaa {
+constant: ddds {
   value: "asdf"
   export: override_optional
 }
