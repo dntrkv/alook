@@ -5,7 +5,7 @@ constant: foo {
   export:  override_required
 }
 
-constant: ddd {
+constant: ddfffd {
   value: "asdf"
   export: override_required
 }
