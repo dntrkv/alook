@@ -9,3 +9,9 @@ constant: ddd {
   value: "asdf"
   export: override_optional
 }
+
+
+constant: aaa {
+  value: "asdf"
+  export: override_optional
+}
