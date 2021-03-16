@@ -17,7 +17,7 @@ constant: dddsddd {
 }
 
 
-constant: vv {
+constant: aaa {
   value: "asdf"
   export: override_required
 }
