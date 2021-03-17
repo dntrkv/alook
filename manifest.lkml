@@ -1,6 +1,6 @@
 project_name: "alook"
 
-constant: foo {
+constant: foo2 {
   value: "asdf"
   export: override_required
 }
